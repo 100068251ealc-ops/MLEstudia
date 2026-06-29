@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>MLestudia — ENURM 🇩🇴</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div id="topBar">
+  <div class="logo">ML<span>estudia</span> 🇩🇴</div>
+  <div id="topProgBar"><div id="topProgFill"></div></div>
+  <div id="xpChip">⚡ <span id="xpCount">0</span></div>
+  <button class="icon-btn" id="themeBtn" onclick="toggleTheme()" title="Tema">🌙</button>
+  <button class="icon-btn" id="soundBtn" onclick="toggleSound()" title="Sonido">🔊</button>
+</div>
+
+<!-- BOTTOM NAV -->
+<nav id="bottomNav">
+  <button class="nav-btn active" id="navAprender" onclick="navTo('aprender')"><span class="ni">🏠</span>Aprender</button>
+  <button class="nav-btn" id="navExamenes" onclick="navTo('examenes')"><span class="ni">📚</span>Biblioteca</button>
+  <button class="nav-btn" id="navPerfil" onclick="navTo('perfil')"><span class="ni">👤</span>Perfil</button>
+</nav>
+
+<!-- ▓▓▓ APRENDER ▓▓▓ -->
+<div class="screen active" id="aprenderScreen">
+  <div class="pg">
+    <div class="xp-banner">
+      <div class="av">🩺</div>
+      <div style="flex:1">
+        <h3 id="bannerLevel">🌱 Pasante</h3>
+        <p id="bannerXP">⚡ 0 XP — ¡Comienza a estudiar!</p>
+        <div class="lvl-bar"><div class="lvl-fill" id="bannerBar" style="width:5%"></div></div>
+      </div>
+    </div>
+    <div class="streak-row">
+      <div class="sp"><div class="sp-val" id="sDone">0</div><div class="sp-lbl">✅ HECHAS</div></div>
+      <div class="sp"><div class="sp-val" id="sAcc">—</div><div class="sp-lbl">🎯 PRECISIÓN</div></div>
+      <div class="sp"><div class="sp-val" id="sXP">0</div><div class="sp-lbl">⚡ XP TOTAL</div></div>
+    </div>
+    <div class="stitle">📝 Bancos de Preguntas</div>
+    <p class="ssub">Selecciona una especialidad y practica bloque a bloque</p>
+    <div id="yearsGrid"></div>
+  </div>
+</div>
+
+<!-- ▓▓▓ BIBLIOTECA ▓▓▓ -->
+<div class="screen" id="examenesScreen">
+  <div class="pg">
+    <div class="stitle">📖 Biblioteca</div>
+    <p class="ssub">Todas las preguntas por materia</p>
+    <div class="tab-row" id="libTabs"></div>
+    <div id="libContent"></div>
+  </div>
+</div>
+
+<!-- ▓▓▓ QUIZ ▓▓▓ -->
+<div class="screen" id="quizScreen">
+  <div class="quiz-pg">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+      <button onclick="quitQuiz()" style="background:none;border:none;cursor:pointer;font-size:24px;color:var(--text-m);line-height:1">✕</button>
+      <div id="quizTag" class="mode-tag mode-year">Variado 1</div>
+      <div style="flex:1"></div>
+      <div id="quizCounter" class="q-counter">1 / 10</div>
+    </div>
+    <div id="mainContainer"></div>
+  </div>
+</div>
+
+<!-- ▓▓▓ BLOQUE COMPLETADO ▓▓▓ -->
+<div class="screen" id="lvlCompleteScreen">
+  <div id="confWrap"></div>
+  <div class="lc-body">
+    <div id="lcTrophy" class="lc-trophy">🏆</div>
+    <h2 id="lcTitle" class="lc-title">¡Bloque Completado!</h2>
+    <p id="lcSub" class="lc-sub">Buen trabajo</p>
+    <div class="stats-row">
+      <div class="stat-box"><div class="sv" id="lcXP">0</div><div class="sl">⚡ XP</div></div>
+      <div class="stat-box"><div class="sv" id="lcAcc">0%</div><div class="sl">🎯 PRECISIÓN</div></div>
+      <div class="stat-box"><div class="sv" id="lcStr">0</div><div class="sl">🔥 RACHA MÁX</div></div>
+    </div>
+    <div class="review-alert" id="revAlert" style="display:none">
+      <span style="font-size:20px">📌</span>
+      <span>Tienes <strong id="wrongCount">0</strong> preguntas para repasar</span>
+    </div>
+    <button class="lc-btn pri" id="nextBlockBtn" onclick="goNextBlock()" style="display:none">🚀 Siguiente Bloque</button>
+    <button class="lc-btn sec" id="revBtn" onclick="goReviewWrong()" style="display:none">🔄 Repasar Preguntas Fallidas</button>
+    <button class="lc-btn sec" onclick="backToHome()">🏠 Volver al Inicio</button>
+  </div>
+</div>
+
+<!-- ▓▓▓ PERFIL ▓▓▓ -->
+<div class="screen" id="perfilScreen">
+  <div class="pg">
+    <div class="profile-card">
+      <div class="av-circle">🩺</div>
+      <div class="p-name">Médicos Líderes ENURM</div>
+      <div class="p-sub" id="pLevel">🌱 Pasante · Nivel 1</div>
+      <div class="xpbw"><div class="xpbf" id="pBar" style="width:5%"></div></div>
+      <div style="font-size:12px;margin-top:4px;opacity:.85" id="pXPlabel">⚡ 0 XP</div>
+    </div>
+    <div class="sg">
+      <div class="sg-label">Mis estadísticas</div>
+      <div class="si" style="cursor:default">
+        <div class="si-l"><div class="si-icon">📊</div><div><div class="si-text">Preguntas respondidas</div><div class="si-sub" id="pTotalQ">0 preguntas</div></div></div>
+      </div>
+      <div class="si" style="cursor:default">
+        <div class="si-l"><div class="si-icon">🎯</div><div><div class="si-text">Precisión global</div><div class="si-sub" id="pAcc">Sin datos aún</div></div></div>
+      </div>
+      <div class="si" style="cursor:default">
+        <div class="si-l"><div class="si-icon">⚡</div><div><div class="si-text">XP acumulado</div><div class="si-sub" id="pXP">0 puntos</div></div></div>
+      </div>
+    </div>
+    <div class="sg">
+      <div class="sg-label">Preferencias</div>
+      <div class="si" onclick="toggleTheme()">
+        <div class="si-l"><div class="si-icon">🎨</div><div><div class="si-text">Tema oscuro</div><div class="si-sub">Cambiar apariencia</div></div></div>
+        <div class="tog" id="themeTog"></div>
+      </div>
+      <div class="si" onclick="toggleSound()">
+        <div class="si-l"><div class="si-icon">🔊</div><div><div class="si-text">Efectos de sonido</div><div class="si-sub">Retroalimentación auditiva</div></div></div>
+        <div class="tog on" id="soundTog"></div>
+      </div>
+    </div>
+    <div class="sg">
+      <div class="sg-label">Datos</div>
+      <div class="si" onclick="resetConfirm()">
+        <div class="si-l"><div class="si-icon">🗑️</div><div><div class="si-text" style="color:var(--red)">Reiniciar todo el progreso</div><div class="si-sub">Eliminar historial y estadísticas</div></div></div>
+        <span style="color:var(--text-l)">›</span>
+      </div>
+    </div>
+    <div style="text-align:center;color:var(--text-l);font-size:12px;padding:8px 0 16px">
+      MLestudia v3.0 · ENURM República Dominicana 🇩🇴<br>
+      Creado por Dr. Esmayanson de León
+    </div>
+  </div>
+</div>
+
+<!-- FLOATING -->
+<div id="streakFlash"></div>
+
+<!-- ═══════════════════════════════════════════
+     DATOS — Bancos de preguntas
+     
+     Para activar un nuevo banco:
+     1. Crea data-NOMBRE.js (copia data-TEMPLATE.js)
+     2. Descomenta su <script> aquí abajo
+     3. En script.js → EXAMS, cambia avail:false → true
+════════════════════════════════════════════ -->
+
+<!-- VARIADOS -->
+<script src="data-variado1.js"></script>
+<!-- <script src="data-variado2.js"></script> -->
+
+<!-- GINECOLOGÍA -->
+<script src="data-gineco1.js"></script>
+<!-- <script src="data-gineco2.js"></script> -->
+
+<!-- CIRUGÍA -->
+<!-- <script src="data-cirugia1.js"></script> -->
+<!-- <script src="data-cirugia2.js"></script> -->
+
+<!-- PEDIATRÍA -->
+<!-- <script src="data-pediatria1.js"></script> -->
+<!-- <script src="data-pediatria2.js"></script> -->
+
+<!-- MEDICINA INTERNA -->
+<!-- <script src="data-interna1.js"></script> -->
+<!-- <script src="data-interna2.js"></script> -->
+
+<!-- CIENCIAS BÁSICAS -->
+<!-- <script src="data-basicas1.js"></script> -->
+
+<!-- SALUD PÚBLICA -->
+<!-- <script src="data-salud1.js"></script> -->
+
+<!-- FARMACOLOGÍA -->
+<!-- <script src="data-farma1.js"></script> -->
+
+<script src="script.js"></script>
+</body>
+</html>

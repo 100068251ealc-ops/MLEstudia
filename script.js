@@ -21,7 +21,7 @@ var EXAMS = [
 
   // ── GINECOLOGÍA ───────────────────────────
   {id:'gineco1',  label:'Ginecología 1',group:'ginecologia',     avail:true, color:'#B07CFF', bg:'#F5EEFF', qs:()=>typeof ENURM_GINECO1!=='undefined'?ENURM_GINECO1:[]},
-  {id:'gineco2',  label:'Ginecología 2',group:'ginecologia',     avail:false, color:'#9A60E8', bg:'#F0E8FF', qs:()=>typeof ENURM_GINECO2!=='undefined'?ENURM_GINECO2:[]},
+  {id:'gineco2',  label:'Ginecología 2',group:'ginecologia',     avail:true, color:'#9A60E8', bg:'#F0E8FF', qs:()=>typeof ENURM_GINECO2!=='undefined'?ENURM_GINECO2:[]},
 
   // ── CIRUGÍA ───────────────────────────────
   {id:'cirugia1', label:'Cirugía 1',    group:'cirugia',         avail:false, color:'#E05C5C', bg:'#FFF0F0', qs:()=>typeof ENURM_CIRUGIA1!=='undefined'?ENURM_CIRUGIA1:[]},

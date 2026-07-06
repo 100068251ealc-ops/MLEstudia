@@ -41,6 +41,15 @@
       <div class="sp"><div class="sp-val" id="sAcc">—</div><div class="sp-lbl">🎯 PRECISIÓN</div></div>
       <div class="sp"><div class="sp-val" id="sXP">0</div><div class="sp-lbl">⚡ XP TOTAL</div></div>
     </div>
+    <div class="chal-card" onclick="openChallengeModal()">
+      <div class="chal-icon">⚡</div>
+      <div class="chal-info">
+        <h3>Modo Reto</h3>
+        <p>Ponte a prueba contrarreloj</p>
+      </div>
+      <span class="chal-arrow">›</span>
+    </div>
+
     <div class="stitle">📝 Bancos de Preguntas</div>
     <p class="ssub">Selecciona una especialidad y practica bloque a bloque</p>
     <div id="yearsGrid"></div>
@@ -65,6 +74,10 @@
       <div id="quizTag" class="mode-tag mode-year">Variado 1</div>
       <div style="flex:1"></div>
       <div id="quizCounter" class="q-counter">1 / 10</div>
+    </div>
+    <div id="chalTimerWrap" class="chal-timer-wrap">
+      <div class="chal-timer-track"><div id="chalTimerFill" class="chal-timer-fill"></div></div>
+      <div id="chalTimerNum" class="chal-timer-num">20s</div>
     </div>
     <div id="mainContainer"></div>
   </div>

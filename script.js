@@ -43,6 +43,34 @@ var EXAMS = [
 
   // ── FARMACOLOGÍA ──────────────────────────
   {id:'farma1',   label:'Farmacología 1',group:'farmacologia',   avail:false, color:'#7DAF94', bg:'#E8F4EE', qs:()=>typeof ENURM_FARMA1!=='undefined'?ENURM_FARMA1:[]},
+
+  {id:'enurm2006', label:'ENURM 2006',  group:'anios', avail:true, color:'#5A9BD4', bg:'#E8F4FF', qs:()=>typeof ENURM_2006!=='undefined'?ENURM_2006:[]},
+
+  {id:'enurm2015', label:'ENURM 2015',  group:'anios', avail:true, color:'#5A9BD4', bg:'#E8F4FF', qs:()=>typeof ENURM_2015!=='undefined'?ENURM_2015:[]},
+
+  {id:'enurm2017', label:'ENURM 2017',  group:'anios', avail:true, color:'#5A9BD4', bg:'#E8F4FF', qs:()=>typeof ENURM_2017!=='undefined'?ENURM_2017:[]},
+
+  // ── EXÁMENES POR AÑO ──────────────────────
+  {id:'enurm2007', label:'ENURM 2007',  group:'anios', avail:true, color:'#5A9BD4', bg:'#E8F4FF', qs:()=>typeof ENURM_2007!=='undefined'?ENURM_2007:[]},
+  {id:'enurm2008', label:'ENURM 2008',  group:'anios', avail:true, color:'#5A9BD4', bg:'#E8F4FF', qs:()=>typeof ENURM_2008!=='undefined'?ENURM_2008:[]},
+  {id:'enurm2009', label:'ENURM 2009',  group:'anios', avail:true, color:'#5A9BD4', bg:'#E8F4FF', qs:()=>typeof ENURM_2009!=='undefined'?ENURM_2009:[]},
+  {id:'enurm2010', label:'ENURM 2010',  group:'anios', avail:true, color:'#5A9BD4', bg:'#E8F4FF', qs:()=>typeof ENURM_2010!=='undefined'?ENURM_2010:[]},
+  {id:'enurm2011', label:'ENURM 2011',  group:'anios', avail:true, color:'#5A9BD4', bg:'#E8F4FF', qs:()=>typeof ENURM_2011!=='undefined'?ENURM_2011:[]},
+  {id:'enurm2012', label:'ENURM 2012',  group:'anios', avail:true, color:'#5A9BD4', bg:'#E8F4FF', qs:()=>typeof ENURM_2012!=='undefined'?ENURM_2012:[]},
+  {id:'enurm2013', label:'ENURM 2013',  group:'anios', avail:false, color:'#5A9BD4', bg:'#E8F4FF', qs:()=>typeof ENURM_2013!=='undefined'?ENURM_2013:[]},
+  {id:'enurm2014', label:'ENURM 2014',  group:'anios', avail:false, color:'#5A9BD4', bg:'#E8F4FF', qs:()=>typeof ENURM_2014!=='undefined'?ENURM_2014:[]},
+  {id:'enurm2015', label:'ENURM 2015',  group:'anios', avail:false, color:'#5A9BD4', bg:'#E8F4FF', qs:()=>typeof ENURM_2015!=='undefined'?ENURM_2015:[]},
+  {id:'enurm2016', label:'ENURM 2016',  group:'anios', avail:false, color:'#5A9BD4', bg:'#E8F4FF', qs:()=>typeof ENURM_2016!=='undefined'?ENURM_2016:[]},
+  {id:'enurm2017', label:'ENURM 2017',  group:'anios', avail:false, color:'#5A9BD4', bg:'#E8F4FF', qs:()=>typeof ENURM_2017!=='undefined'?ENURM_2017:[]},
+  {id:'enurm2018', label:'ENURM 2018',  group:'anios', avail:false, color:'#5A9BD4', bg:'#E8F4FF', qs:()=>typeof ENURM_2018!=='undefined'?ENURM_2018:[]},
+  {id:'enurm2019', label:'ENURM 2019',  group:'anios', avail:false, color:'#5A9BD4', bg:'#E8F4FF', qs:()=>typeof ENURM_2019!=='undefined'?ENURM_2019:[]},
+  {id:'enurm2020', label:'ENURM 2020',  group:'anios', avail:false, color:'#5A9BD4', bg:'#E8F4FF', qs:()=>typeof ENURM_2020!=='undefined'?ENURM_2020:[]},
+  {id:'enurm2021', label:'ENURM 2021',  group:'anios', avail:false, color:'#5A9BD4', bg:'#E8F4FF', qs:()=>typeof ENURM_2021!=='undefined'?ENURM_2021:[]},
+  {id:'enurm2022', label:'ENURM 2022',  group:'anios', avail:false, color:'#5A9BD4', bg:'#E8F4FF', qs:()=>typeof ENURM_2022!=='undefined'?ENURM_2022:[]},
+  {id:'enurm2023', label:'ENURM 2023',  group:'anios', avail:false, color:'#5A9BD4', bg:'#E8F4FF', qs:()=>typeof ENURM_2023!=='undefined'?ENURM_2023:[]},
+  {id:'enurm2024', label:'ENURM 2024',  group:'anios', avail:false, color:'#5A9BD4', bg:'#E8F4FF', qs:()=>typeof ENURM_2024!=='undefined'?ENURM_2024:[]},
+  {id:'enurm2025', label:'ENURM 2025',  group:'anios', avail:false, color:'#5A9BD4', bg:'#E8F4FF', qs:()=>typeof ENURM_2025!=='undefined'?ENURM_2025:[]},
+  {id:'enurm2026', label:'ENURM 2026',  group:'anios', avail:false, color:'#5A9BD4', bg:'#E8F4FF', qs:()=>typeof ENURM_2026!=='undefined'?ENURM_2026:[]},
 ];
 
 /* ══════════════════════════════════════════════
@@ -57,6 +85,7 @@ var GROUP_LABELS = {
   ciencias_basicas:{icon:'🔬', name:'Ciencias Básicas'},
   salud_publica:   {icon:'🏥', name:'Salud Pública'},
   farmacologia:    {icon:'💊', name:'Farmacología'},
+  anios:           {icon:'📅', name:'Exámenes ENURM por Año'},
 };
 
 var SUBS = {
@@ -80,6 +109,15 @@ var curExam=null,curBlock=0,curQ=0;
 var sesXP=0,sesStr=0,sesMaxStr=0,sesCor=0,sesTot=0;
 var queue=[],answered=false,hintsLeft=2;
 var isRev=false,soundOn=true,libTab='todos';
+
+/* ══ CHALLENGE STATE ══ */
+var isChal=false,chalType=null,chalTimerId=null,chalTimeLeft=0,chalSurvSecs=20,chalEnded=false;
+var CHAL_CFG={
+  perQ:     {label:'Contrarreloj',   desc:'20s por pregunta, sin excepciones', icon:'⏱️'},
+  total:    {label:'Tiempo Total',   desc:'5 minutos para todo el bloque',     icon:'⌛'},
+  survival: {label:'Supervivencia',  desc:'Empieza en 20s y se acorta cada acierto', icon:'🔥'}
+};
+var CHAL_PERQ_SECS=20, CHAL_TOTAL_SECS=300, CHAL_SURV_MIN=8;
 
 /* ══ STORAGE ══ */
 function lp(){try{return JSON.parse(localStorage.getItem('ml_v5')||'{}')}catch{return{}}}
@@ -160,28 +198,23 @@ function navTo(tab){
   if(nb)nb.classList.add('active');
   closeModal();
   if(tab==='aprender'){showScreen('aprenderScreen');buildHome()}
+  else if(tab==='enurm'){showScreen('enurmScreen');buildEnurmScreen()}
   else if(tab==='examenes'){showScreen('examenesScreen');buildLib()}
   else if(tab==='perfil'){showScreen('perfilScreen');buildPerfil()}
   playS('clk');
 }
 
-/* ══ HOME — agrupado por especialidad ══ */
-function buildHome(){
-  var st=gStats(),lv=getLvl(st.xp);
-  var set=(id,v,t)=>{var e=document.getElementById(id);if(!e)return;t==='st'?e.style.width=v:e.textContent=v};
-  set('bannerLevel',lv.icon+' '+lv.name,'tx');
-  set('bannerXP','⚡ '+st.xp+' XP acumulados','tx');
-  set('bannerBar',lv.pct+'%','st');
-  set('sDone',st.n,'tx');
-  set('sAcc',st.n>0?Math.round(st.c/st.n*100)+'%':'—','tx');
-  set('sXP',st.xp,'tx');
-
-  var grid=document.getElementById('yearsGrid');if(!grid)return;grid.innerHTML='';
+/* ══ Construye el grid de tarjetas de examen dentro de un contenedor,
+      agrupando solo los EXAMS cuyo campo `group` está en allowedGroups.
+      Si allowedGroups es null, incluye todos los grupos. ══ */
+function renderExamGrid(containerId, allowedGroups){
+  var grid=document.getElementById(containerId);if(!grid)return;grid.innerHTML='';
 
   // Agrupar exámenes
   var groups={};
   EXAMS.forEach(exam=>{
     var g=exam.group||'variado';
+    if(allowedGroups && allowedGroups.indexOf(g)===-1)return;
     if(!groups[g])groups[g]=[];
     groups[g].push(exam);
   });
@@ -222,6 +255,27 @@ function buildHome(){
       grid.appendChild(card);
     });
   });
+}
+
+/* ══ HOME — agrupado por especialidad (excluye exámenes por año) ══ */
+function buildHome(){
+  var st=gStats(),lv=getLvl(st.xp);
+  var set=(id,v,t)=>{var e=document.getElementById(id);if(!e)return;t==='st'?e.style.width=v:e.textContent=v};
+  set('bannerLevel',lv.icon+' '+lv.name,'tx');
+  set('bannerXP','⚡ '+st.xp+' XP acumulados','tx');
+  set('bannerBar',lv.pct+'%','st');
+  set('sDone',st.n,'tx');
+  set('sAcc',st.n>0?Math.round(st.c/st.n*100)+'%':'—','tx');
+  set('sXP',st.xp,'tx');
+
+  // Todos los grupos EXCEPTO 'anios' (esos viven en su propia pantalla)
+  var allGroups=Object.keys(GROUP_LABELS).filter(g=>g!=='anios');
+  renderExamGrid('yearsGrid', allGroups);
+}
+
+/* ══ EXÁMENES ENURM — solo el grupo 'anios' ══ */
+function buildEnurmScreen(){
+  renderExamGrid('enurmGrid', ['anios']);
 }
 
 /* ══ EXAM MODAL ══ */
@@ -278,6 +332,93 @@ function startBlock(examId,bn){
   showScreen('quizScreen');renderQ();
 }
 
+/* ══ CHALLENGE MODE ══ */
+function openChallengeModal(){
+  var examOpts=EXAMS.filter(e=>e.avail).map(e=>`<option value="${e.id}">${e.label}</option>`).join('');
+  var ov=document.createElement('div');ov.className='mo';ov.id='mainModal';
+  ov.innerHTML=`<div class="mb" style="max-width:420px;text-align:left">
+    <div style="text-align:center">
+      <div style="font-size:40px;margin-bottom:4px">⚡</div>
+      <h3 style="text-align:center">Modo Reto</h3>
+      <p style="text-align:center">Elige tu tipo de reto y el banco de preguntas</p>
+    </div>
+    <div id="chalTypeRow" style="display:flex;flex-direction:column;gap:8px;margin:16px 0">
+      ${Object.entries(CHAL_CFG).map(([k,v])=>`
+        <div class="chal-opt" data-t="${k}" onclick="selChalType('${k}',this)">
+          <div class="chal-opt-icon">${v.icon}</div>
+          <div><div class="chal-opt-t">${v.label}</div><div class="chal-opt-d">${v.desc}</div></div>
+        </div>`).join('')}
+    </div>
+    <label style="font-size:13px;font-weight:700;color:var(--text-m);display:block;margin-bottom:6px">Banco de preguntas</label>
+    <select id="chalExamSel" style="width:100%;padding:12px;border-radius:var(--rs);border:2px solid var(--border);background:var(--card2);color:var(--text);font-family:'Lato',sans-serif;font-size:14px;margin-bottom:18px">
+      <option value="ALL">🎲 Variado (todos los bancos)</option>
+      ${examOpts}
+    </select>
+    <div class="mbtns">
+      <button class="mbtn" id="chalStartBtn" style="background:#6C5CE7;color:#fff;opacity:.5" onclick="launchChallenge()" disabled>🚀 Elige un tipo de reto</button>
+      <button class="mbtn ghost" onclick="closeModal()">Cancelar</button>
+    </div>
+  </div>`;
+  document.body.appendChild(ov);
+  ov.addEventListener('click',e=>{if(e.target===ov)closeModal()});
+  chalType=null;
+}
+function selChalType(t,el){
+  chalType=t;playS('clk');
+  document.querySelectorAll('.chal-opt').forEach(o=>o.classList.remove('sel'));
+  el.classList.add('sel');
+  var btn=document.getElementById('chalStartBtn');
+  if(btn){btn.disabled=false;btn.style.opacity=1;btn.textContent='🚀 ¡Comenzar reto!'}
+}
+function launchChallenge(){
+  if(!chalType)return;
+  var examId=document.getElementById('chalExamSel').value;
+  closeModal();
+  var pool=[];
+  if(examId==='ALL'){EXAMS.filter(e=>e.avail).forEach(e=>pool.push(...e.qs()))}
+  else{var ex=EXAMS.find(e=>e.id===examId);if(ex)pool=ex.qs()}
+  if(!pool.length){showToast('⚠️ Sin preguntas disponibles');return}
+  curExam={id:'__chal__',label:'Modo Reto',avail:true};
+  curBlock=0;curQ=0;isRev=false;isChal=true;chalEnded=false;
+  sesXP=0;sesStr=0;sesMaxStr=0;sesCor=0;sesTot=0;answered=false;hintsLeft=2;
+  chalSurvSecs=CHAL_PERQ_SECS;
+  queue=shuf(pool).slice(0,10);
+  showScreen('quizScreen');renderQ();
+}
+function stopChalTimer(){if(chalTimerId){clearInterval(chalTimerId);chalTimerId=null}}
+function chalMax(){return chalType==='total'?CHAL_TOTAL_SECS:chalType==='survival'?chalSurvSecs:CHAL_PERQ_SECS}
+function updChalTimerUI(){
+  var fill=document.getElementById('chalTimerFill'),num=document.getElementById('chalTimerNum');
+  var max=chalType==='total'?CHAL_TOTAL_SECS:chalMax();
+  var pct=Math.max(0,Math.min(100,chalTimeLeft/max*100));
+  if(fill){fill.style.width=pct+'%';fill.className='chal-timer-fill'+(chalTimeLeft<=5?' danger':chalTimeLeft<=10?' warn':'')}
+  if(num)num.textContent=chalType==='total'?(Math.floor(chalTimeLeft/60)+':'+String(chalTimeLeft%60).padStart(2,'0')):chalTimeLeft+'s';
+}
+function startChalTimer(fresh){
+  stopChalTimer();
+  if(chalType==='total'){ if(fresh)chalTimeLeft=CHAL_TOTAL_SECS }
+  else{ chalTimeLeft=chalMax() }
+  updChalTimerUI();
+  chalTimerId=setInterval(()=>{
+    chalTimeLeft--;
+    if(chalTimeLeft<=3&&chalTimeLeft>0)playS('clk');
+    updChalTimerUI();
+    if(chalTimeLeft<=0){stopChalTimer();timeUp()}
+  },1000);
+}
+function timeUp(){
+  if(answered)return;answered=true;sesTot++;sesStr=0;
+  var q=queue[curQ];
+  document.querySelectorAll('.opt-btn').forEach((b,i)=>{b.disabled=true;if(i===q.ans)b.classList.add('correct')});
+  var fb=document.getElementById('fb'),fbt=document.getElementById('fbt'),fbx=document.getElementById('fbx'),cb=document.getElementById('contBtn');
+  if(fb)fb.className='feedback err show';
+  if(fbt)fbt.textContent='⏰ ¡Se acabó el tiempo!';
+  if(fbx)fbx.innerHTML=q.exp||'';
+  if(cb){cb.className='cont-btn err-c show';cb.textContent='📖 Continuar'}
+  playS('err');
+  if(chalType==='total'){ chalEnded=true; if(cb)cb.textContent='🏁 Ver resultados' }
+}
+
 /* ══ QUIZ ══ */
 function updTopBar(){
   var fill=document.getElementById('topProgFill'),xpc=document.getElementById('xpCount');
@@ -293,9 +434,15 @@ function renderQ(){
   var c=document.getElementById('mainContainer');if(!c)return;c.innerHTML='';
 
   var tag=document.getElementById('quizTag');
-  if(tag){tag.textContent=isRev?'🔄 REPASO':curExam.label;
-    tag.className='mode-tag '+(isRev?'mode-review':'mode-year')}
+  if(tag){tag.textContent=isRev?'🔄 REPASO':isChal?'⚡ '+CHAL_CFG[chalType].label:curExam.label;
+    tag.className='mode-tag '+(isRev?'mode-review':isChal?'mode-chal':'mode-year')}
   updTopBar();
+
+  var tw=document.getElementById('chalTimerWrap');
+  if(tw){
+    if(isChal){tw.style.display='flex';startChalTimer(curQ===0)}
+    else{tw.style.display='none';stopChalTimer()}
+  }
 
   var card=document.createElement('div');card.className='q-card';
   card.innerHTML=`
@@ -344,6 +491,7 @@ function doHint(q,btn){
 
 function doAns(idx,q){
   if(answered)return;answered=true;sesTot++;
+  if(isChal)stopChalTimer();
   var ok=idx===q.ans;
   document.querySelectorAll('.opt-btn').forEach((b,i)=>{
     b.disabled=true;
@@ -365,29 +513,36 @@ function showFB(ok,q){
     if(cb){cb.className='cont-btn ok-c show';cb.textContent='Siguiente ➜'}
     playS('ok');
     if(sesStr>=3){showFlash({3:'🔥 ¡Racha x3!',4:'⚡ ¡Racha x4!',5:'🚀 ¡Imparable!',6:'💥 ¡Leyenda!'}[sesStr]||'🔥 Racha x'+sesStr);playS('str')}
-    rmWrong(curExam.id,curBlock,q);
+    if(isChal&&chalType==='survival')chalSurvSecs=Math.max(CHAL_SURV_MIN,chalSurvSecs-1);
+    if(!isChal)rmWrong(curExam.id,curBlock,q);
   }else{
     sesStr=0;
     if(fb)fb.className='feedback err show';
     if(fbt)fbt.textContent='❌ Incorrecto';
     if(fbx)fbx.innerHTML=q.exp||'';
     if(cb){cb.className='cont-btn err-c show';cb.textContent='📖 Continuar'}
-    playS('err');addWrong(curExam.id,curBlock,q);
+    playS('err');if(!isChal)addWrong(curExam.id,curBlock,q);
   }
 }
 
 function addWrong(eid,bn,q){var p=gep(eid);if(!p.b[bn])return;if(!p.b[bn].wrong)p.b[bn].wrong=[];if(!p.b[bn].wrong.some(w=>w.id===q.id))p.b[bn].wrong.push(q);sep(eid,p)}
 function rmWrong(eid,bn,q){var p=gep(eid);if(!p.b[bn]?.wrong)return;p.b[bn].wrong=p.b[bn].wrong.filter(w=>w.id!==q.id);sep(eid,p)}
 
-function nextQ(){curQ++;if(curQ>=queue.length)showBlockDone();else renderQ()}
+function nextQ(){
+  if(chalEnded){chalEnded=false;showBlockDone();return}
+  curQ++;if(curQ>=queue.length)showBlockDone();else renderQ()
+}
 
 function quitQuiz(){
-  if(curExam){var p=gep(curExam.id);if(p.b[curBlock]?.st==='active')p.b[curBlock].st='avail';sep(curExam.id,p)}
+  stopChalTimer();
+  if(curExam&&!isChal){var p=gep(curExam.id);if(p.b[curBlock]?.st==='active')p.b[curBlock].st='avail';sep(curExam.id,p)}
+  isChal=false;chalType=null;chalEnded=false;
   navTo('aprender');
 }
 
 /* ══ BLOCK DONE ══ */
 function showBlockDone(){
+  stopChalTimer();
   playS('lvl');showScreen('lvlCompleteScreen');
   var acc=sesTot?Math.round(sesCor/sesTot*100):0;
   document.getElementById('lcXP').textContent=sesXP;
@@ -395,7 +550,14 @@ function showBlockDone(){
   document.getElementById('lcStr').textContent=sesMaxStr;
   document.getElementById('topProgFill').style.width='100%';
 
-  if(curExam){
+  var nb=document.getElementById('nextBlockBtn'),rb=document.getElementById('revBtn'),
+      ra=document.getElementById('revAlert');
+
+  if(isChal){
+    if(nb)nb.style.display='none';
+    if(rb)rb.style.display='none';
+    if(ra)ra.style.display='none';
+  }else if(curExam){
     var p=gep(curExam.id);
     p.b[curBlock].st='done';p.b[curBlock].cor=sesCor;p.b[curBlock].tot=sesTot;
     p.xp=(p.xp||0)+sesXP;p.cor=(p.cor||0)+sesCor;p.ans=(p.ans||0)+sesTot;
@@ -403,18 +565,26 @@ function showBlockDone(){
     if(curBlock<10)p.b[curBlock+1].st='avail';
     sep(curExam.id,p);
     var wl=(p.b[curBlock]?.wrong||[]).length;
-    var ra=document.getElementById('revAlert'),wc=document.getElementById('wrongCount');
+    var wc=document.getElementById('wrongCount');
     if(ra)ra.style.display=wl?'flex':'none';if(wc)wc.textContent=wl;
-    var nb=document.getElementById('nextBlockBtn'),rb=document.getElementById('revBtn');
     if(nb)nb.style.display=curBlock<10?'block':'none';
     if(rb)rb.style.display=wl?'block':'none';
   }
 
   var tr,ti,sb;
-  if(acc===100){tr='🥇';ti='¡PERFECTO!';sb='100% de precisión. ¡Dominas este bloque!';confetti();setTimeout(confetti,500)}
-  else if(acc>=80){tr='🏆';ti='¡Excelente!';sb=sesCor+'/'+sesTot+' correctas. ¡Muy bien!';confetti()}
-  else if(acc>=60){tr='🎯';ti='¡Buen trabajo!';sb=sesCor+'/'+sesTot+' correctas. Repasa lo fallido.'}
-  else{tr='📚';ti='¡Sigue adelante!';sb=sesCor+'/'+sesTot+' correctas. ¡Puedes mejorar!'}
+  if(isChal){
+    var extra=chalType==='survival'?' Sobreviviste '+sesTot+' preguntas.':chalType==='total'?' Terminaste con '+chalTimeLeft+'s de sobra.':'';
+    if(acc===100){tr='🥇';ti='¡RETO PERFECTO!';sb='100% de precisión contrarreloj.'+extra;confetti();setTimeout(confetti,500)}
+    else if(acc>=80){tr='🏆';ti='¡Gran reto!';sb=sesCor+'/'+sesTot+' correctas.'+extra;confetti()}
+    else if(acc>=60){tr='🎯';ti='¡Nada mal!';sb=sesCor+'/'+sesTot+' correctas.'+extra}
+    else{tr='⚡';ti='¡Sigue entrenando!';sb=sesCor+'/'+sesTot+' correctas.'+extra}
+    isChal=false;chalType=null;
+  }else{
+    if(acc===100){tr='🥇';ti='¡PERFECTO!';sb='100% de precisión. ¡Dominas este bloque!';confetti();setTimeout(confetti,500)}
+    else if(acc>=80){tr='🏆';ti='¡Excelente!';sb=sesCor+'/'+sesTot+' correctas. ¡Muy bien!';confetti()}
+    else if(acc>=60){tr='🎯';ti='¡Buen trabajo!';sb=sesCor+'/'+sesTot+' correctas. Repasa lo fallido.'}
+    else{tr='📚';ti='¡Sigue adelante!';sb=sesCor+'/'+sesTot+' correctas. ¡Puedes mejorar!'}
+  }
   document.getElementById('lcTrophy').textContent=tr;
   document.getElementById('lcTitle').textContent=ti;
   document.getElementById('lcSub').textContent=sb;

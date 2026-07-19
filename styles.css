@@ -120,6 +120,50 @@ h1,h2,h3,h4{font-family:'Nunito',sans-serif}
 .bsq.pending{background:var(--beige);color:var(--text-m);border:2px dashed var(--beige-d)}
 .bsq.locked{background:var(--border);color:var(--text-l);cursor:default}
 
+/* CHALLENGE CARD */
+.chal-card{
+  background:linear-gradient(135deg,#6C5CE7 0%,#5A9BD4 100%);
+  border-radius:var(--r);padding:16px 18px;margin-bottom:20px;
+  display:flex;align-items:center;gap:14px;color:#fff;
+  cursor:pointer;transition:all .2s;box-shadow:var(--shadow);
+  position:relative;overflow:hidden
+}
+.chal-card::after{
+  content:'';position:absolute;top:-50%;right:-20%;width:120px;height:220%;
+  background:rgba(255,255,255,.12);transform:rotate(20deg);
+  animation:chalShine 3.5s ease-in-out infinite
+}
+@keyframes chalShine{0%,100%{transform:translateX(-10px) rotate(20deg)}50%{transform:translateX(40px) rotate(20deg)}}
+.chal-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(108,92,231,.35)}
+.chal-icon{font-size:30px;flex-shrink:0;animation:chalPulse 1.8s ease-in-out infinite}
+@keyframes chalPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
+.chal-info{flex:1}
+.chal-info h3{font-family:'Nunito',sans-serif;font-weight:900;font-size:16px}
+.chal-info p{font-size:12px;opacity:.9;margin-top:2px}
+.chal-arrow{font-size:22px;opacity:.8}
+
+/* CHALLENGE MODAL OPTIONS */
+.chal-opt{
+  display:flex;align-items:center;gap:12px;padding:12px 14px;
+  border:2px solid var(--border);border-radius:var(--rs);cursor:pointer;
+  background:var(--card2);transition:all .18s
+}
+.chal-opt:hover{border-color:#6C5CE7}
+.chal-opt.sel{border-color:#6C5CE7;background:rgba(108,92,231,.08)}
+.chal-opt-icon{font-size:22px;flex-shrink:0}
+.chal-opt-t{font-family:'Nunito',sans-serif;font-weight:800;font-size:14px;color:var(--text)}
+.chal-opt-d{font-size:12px;color:var(--text-m)}
+
+/* CHALLENGE TIMER (in quiz) */
+.chal-timer-wrap{display:none;align-items:center;gap:10px;margin-bottom:14px}
+.chal-timer-track{flex:1;height:10px;background:var(--border);border-radius:99px;overflow:hidden}
+.chal-timer-fill{height:100%;width:100%;background:var(--sage);border-radius:99px;transition:width 1s linear,background .3s}
+.chal-timer-fill.warn{background:var(--yellow)}
+.chal-timer-fill.danger{background:var(--red);animation:chalDanger .5s infinite}
+@keyframes chalDanger{0%,100%{opacity:1}50%{opacity:.55}}
+.chal-timer-num{font-family:'Nunito',sans-serif;font-weight:900;font-size:14px;color:var(--text-m);min-width:38px;text-align:right}
+.mode-chal{background:#6C5CE7;color:#fff}
+
 /* QUIZ */
 .quiz-pg{padding:70px 16px 100px;max-width:560px;margin:0 auto}
 .mode-tag{display:inline-flex;align-items:center;gap:6px;font-family:'Nunito',sans-serif;font-weight:800;font-size:12px;padding:4px 12px;border-radius:99px}
